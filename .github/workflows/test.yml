@@ -10,5 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say hello
-        run: echo "GitHub Actions is working!"
+      - name: Get the code
+        uses: actions/checkout@v4
+
+      - name: Test README
+        run: test -f README.md
